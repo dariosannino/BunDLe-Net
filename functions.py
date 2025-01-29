@@ -66,7 +66,7 @@ class Database:
         self.states = np.sum([n*States[s] for n, s in enumerate(States)], axis = 0).astype(int) # making a single states array in which each number corresponds to a behaviour
         self.state_names = [*States.keys()]
         self.neuron_traces = np.array(deltaFOverF_bc).T
-        #self.derivative_traces = derivatives['traces'].T
+        self.derivative_traces = derivatives['traces'].T
         self.neuron_names = np.array(NeuronNames, dtype=object)
         self.fps = fps
 
